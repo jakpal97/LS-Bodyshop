@@ -1,11 +1,12 @@
 <div
-	class="portfolio-section md:max-w-4/5 lg:w-4/5 md:mx-auto flex justify-center items-center flex-col font-montserrat bg-gray-900  mb-5 py-10">
+	class="portfolio-section md:max-w-4/5 lg:w-4/5 md:mx-auto flex justify-center items-center flex-col font-montserrat bg-gray-900 mb-5 py-10">
 	<div class="intro flex flex-col justify-center items-center mt-5 pb-5 px-5 md:px-10">
 		<h3 class="text-3xl text-center text-black">Portfolio</h3>
 		<p class="font-poppins text-xl text-center text-black mt-3">
 			Oto wyniki naszej pracy w LS Bodyshop Dorset. Jeśli chcesz zobaczyć pełne portfolio, kliknij <a
 				href=""
-				class="text-red-600">TUTAJ!</a>
+				class="text-red-600">TUTAJ!</a
+			>
 		</p>
 	</div>
 	<div class="slider relative w-full md:w-2/3 h-80 md:h-96 overflow-hidden">
@@ -26,49 +27,73 @@
 		</button>
 	</div>
 </div>
-
 <style>
-	.portfolio-section {
-        margin-top: 10px;
-		width: 100%; /* Szerokość sekcji na 100% dla urządzeń mobilnych */
-		border-radius: 20px; /* Zaokrąglenie rogów sekcji */
-		background: linear-gradient(to bottom right, #f0f0f0, #ffffff);
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Dodanie cienia dla sekcji */
-	}
+.portfolio-section {
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 20px;
+    background: linear-gradient(to bottom right, #f0f0f0, #ffffff);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 
-	@media (min-width: 768px) {
-		/* Styl dla średnich i dużych ekranów */
-		.portfolio-section {
-			width: 90%; /* Szerokość sekcji na 90% */
-			margin: auto; /* Wyśrodkowanie sekcji */
-		}
-	}
-	/* Dodatkowe style dla sekcji portfolio */
-	
+.slider {
+    relative: w-full;
+    md: w-2/3;
+    height: 100px; /* Nowa wysokość suwaka */
+    overflow: hidden;
+}
 
-	.slider-img {
-		transition: transform 0.5s; /* Dodanie płynności podczas zmiany slajdów */
-	}
-	.slider-img {
-		height: 300px;
-		width: auto;
-		object-fit: cover;
-	}
+.slider-box {
+    display: flex;
+    transition-transform: duration-500;
+}
 
-	/* Ukrycie strzałek na urządzeniach o mniejszych rozmiarach ekranu */
-	@media (max-width: 767px) {
-		.btn {
-			display: none;
-		}
-	}
+.slider-img {
+    flex: 0 0 20%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.btn {
+    absolute: top-1/2;
+    transform: -translate-y-1/2;
+    px-2: py-1;
+    text-white: bg-black;
+    bg-opacity-40: text-4xl;
+    border-none: cursor-pointer;
+}
+
+.btn-left {
+    left: 0;
+}
+
+.btn-right {
+    right: 0;
+}
+
+@media (max-width: 767px) {
+    .btn {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .portfolio-section {
+        width: 90%;
+    }
+    .slider {
+        height: 450px; 
+    }
+}
 </style>
 <script>
 	document.addEventListener('DOMContentLoaded', function () {
-		const sliderBox = document.querySelector('.slider-box') as HTMLDivElement
+		const sliderBox = document.querySelector('.slider-box')
 		const leftBtn = document.querySelector('.btn-left')
 		const rightBtn = document.querySelector('.btn-right')
 		const carouselImages = document.querySelectorAll('.slider-img')
-		const carouselWidth = sliderBox.clientWidth
+		const carouselWidth = sliderBox.clientWidth / carouselImages.length
 		const carouselSpeed = 3000
 
 		let index = 0
