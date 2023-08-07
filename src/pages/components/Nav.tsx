@@ -12,7 +12,7 @@ const Nav = () => {
 
 	return (
 		<nav className={`${matches ? 'sticky top-0 bg-white' : ''} z-50 w-full`}>
-			<div className="flex justify-between items-center pt-5 pb-5 font-medium md:mx-16 ld:mx-32">
+			<div className="container mx-auto max-w-4/5 lg:w-4/5 md:mx-auto flex justify-between items-center pt-5 pb-5 font-medium md:mx-16 ld:mx-32">
 				<img src="/Logo.png" alt="Logo" className="w-40 h-15"></img>
 				{matches && (
 					<div className="flex gap-12 ">

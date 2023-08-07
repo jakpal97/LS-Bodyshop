@@ -1,6 +1,6 @@
 ---
 import Nav from '../pages/components/Nav'
-import Footer from '../pages/components/Footer.astro';
+import Footer from '../pages/components/Footer.astro'
 ---
 
 <html lang="en">
@@ -18,19 +18,18 @@ import Footer from '../pages/components/Footer.astro';
 			<Nav client:load />
 
 			<slot />
-			<Footer/>
+			<Footer />
 		</main>
 		<style>
 			.parallax {
-            background-image: url('./tlo.jpg');
-            height: 100%;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
+				background-image: url('/tlo.jpg');
+				height: 100vh;
+				background-attachment: fixed;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
 		</style>
-		
 
 		<script src="https://kit.fontawesome.com/82d0f73444.js" crossorigin="anonymous"></script>
 	</body>
