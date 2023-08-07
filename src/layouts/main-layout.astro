@@ -1,0 +1,37 @@
+---
+import Nav from '../pages/components/Nav'
+import Footer from '../pages/components/Footer.astro';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+	</head>
+	<body class="m-0 parallax">
+		<main>
+			<Nav client:load />
+
+			<slot />
+			<Footer/>
+		</main>
+		<style>
+			.parallax {
+            background-image: url('./tlo.jpg');
+            height: 100%;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+		</style>
+		
+
+		<script src="https://kit.fontawesome.com/82d0f73444.js" crossorigin="anonymous"></script>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "name": "strona-ludwika",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^2.2.1",
+    "@astrojs/tailwind": "^4.0.0",
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "@glidejs/glide": "^3.6.0",
+    "@splidejs/react-splide": "^0.7.12",
+    "@splidejs/splide": "^4.1.4",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "astro": "^2.7.2",
+    "astro-google-fonts-optimizer": "^0.2.2",
+    "framer-motion": "^10.12.18",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-intersection-observer": "^9.5.2",
+    "react-responsive-carousel": "^3.2.23",
+    "scrollmagic": "^2.0.8",
+    "tailwindcss": "^3.3.2"
+  }
+}

@@ -1,0 +1,66 @@
+<div class="services-section  md:max-w-4/5 lg:w-4/5 md:mx-auto flex flex-col justify-center items-center md:mt-10 lg:mt-10">
+    <h3 id="services" class="trans font-poppins text-3xl md:mt-8">Services</h3>
+    <p class="trans font-poppins text-xl ml-5 mr-5 pb-5 pt-5 text-center">We provide the following services at affordable prices:</p>
+    <div class="services-list flex flex-col justify-center items-center md:max-w-3/5 lg:w-3/5 md:mx-auto">
+        <div class="trans flex flex-col justify-center items-center m-5 shadow-2 md:flex-row md:shadow">
+            <img src="/dent.jpg" alt="Dent Repair" class="h-59  md:mr-5 md:w-1/2" />
+            <p class="font-poppins text-xl text-black p-5">Dent Repair - Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, deleniti!</p>
+        </div>
+        <div class="trans flex flex-col justify-center items-center m-5 bg-black mb-5 mt-5 md:flex-row-reverse md:shadow">
+            <img src="/polera.jpg" alt="Car Polishing" class="h-59  md:ml-5 md:w-1/2" />
+            <p class="font-poppins text-xl text-white p-5">Car Polishing - Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt sint iusto modi nesciunt ea libero inventore illum sit nostrum accusantium?</p>
+        </div>
+        <div class="trans flex flex-col justify-center items-center shadow m-5 mb-5 md:flex-row md:justify-end md:shadow">
+            <img src="/blachara.jpg" alt="Bodywork and Painting" class="h-59 md:mr-5 md:w-1/2" />
+            <p id="slider" class="font-poppins text-xl p-5">Bodywork and Painting - Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt sint iusto modi nesciunt ea libero inventore illum sit nostrum accusantium?</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .services-section {
+        padding: 20px;
+        border-radius: 20px; /* Zaokrąglenie rogów sekcji */
+        background: linear-gradient(to bottom right, #f0f0f0, #ffffff);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Dodanie cienia dla sekcji */
+    }
+
+    .services-list {
+        margin-top: 20px;
+    }
+
+    .trans {
+        opacity: 0;
+        filter: blur(3px);
+        transform: translateY(-20px);
+        transition: all 0.5s;
+        z-index: 10;
+    }
+
+    .show {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion) {
+        .trans {
+            transition: none;
+        }
+    }
+</style>
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
+            }
+        });
+    });
+
+    const hiddenElements = document.querySelectorAll('.trans');
+    hiddenElements.forEach((el) => observer.observe(el));
+</script>

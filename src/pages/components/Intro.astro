@@ -1,0 +1,65 @@
+<div class="intro flex flex-col justify-center items-center p-10 md:max-w-4/5 lg:w-4/5 md:mx-auto">
+  <div class="flex flex-col justify-center items-center md:flex-row">
+    <div class="flex flex-col justify-center items-center md:mr-10">
+      <h1 class="font-poppins text-4xl font-bold animate-fade-in">L<span class="text-red">S</span>Bodyshop</h1>
+      <h2 class="font-poppins font-bold text-2xl mt-3 animate-fade-in">Bournemouth</h2>
+      <p id="anim-p" class="text-justify mt-5 font-bold pb-10 animate-fade-in">Welcome to LS Bodyshop! We provide top-notch auto body services in Bournemouth. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste suscipit illum consequuntur ea. Suscipit laudantium ducimus iste, officia tenetur soluta tempora deserunt nemo autem neque officiis quae. Click the arrow to explore our projects!</p>
+    </div>
+    <img src="/dent.jpg" alt="Bodyshop" class="hidden md:block w-128 h-128 ml-10 rounded-full animate-parallax" />
+  </div>
+  <div class="flex items-center justify-end w-10 h-10">
+    <a href="#slider" class="arrow-link">
+      <i class="fas fa-arrow-down text-5xl arrow animate-bounce mb-5"></i>
+    </a>
+  </div>
+</div>
+
+<style>
+  .intro {
+    min-height: calc(100vh - 138px);
+    background: linear-gradient(to bottom right, #f0f0f0, #ffffff);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .arrow-link:hover .arrow {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .arrow {
+    animation: jump 2s infinite;
+  }
+
+  .animate-parallax {
+    animation: parallax 10s infinite alternate;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 2s;
+  }
+
+  @keyframes jump {
+    0%,100% {
+      transform: translateY(0);
+    }
+    50%{
+      transform: translateY(10px);
+    }
+  }
+
+  @keyframes parallax {
+    0%, 100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-30px) scale(1.1);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+</style>
