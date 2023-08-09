@@ -1,26 +1,26 @@
-<div class="bg-black flex flex-col items-center py-10 md:mt-10">
+<div class="bg-black flex flex-col items-center py-10 md:mt-10 md:w-9/10 lg:w-9/10 mx-auto">
   <div class="max-w-full md:max-w-4/5">
     <div class="text-center">
-      <h3 class="text-2xl text-white pt-5 pb-5">Where you can find us:</h3>
+      <h3 class="text-3xl text-white pt-5 pb-5">Where you can find us:</h3>
     </div>
-    <div class="flex flex-col md:flex-row md:items-center">
+    <div class="flex flex-col md:flex-row md:items-center gap-5">
       <div class="w-full md:w-1/2 md:pr-5 map-container">
-        <iframe class="w-full h-40 md:h-80 rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2521.1423048964166!2d-1.92140072302832!3d50.810002061409875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4873a3e93c9d5287%3A0x5ff98a191751e9aa!2sLS%20Bodyshop%20Dorset!5e0!3m2!1sen!2spl!4v1689587969192!5m2!1sen!2spl" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="w-full h-50 md:h-96 rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2521.1423048964166!2d-1.92140072302832!3d50.810002061409875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4873a3e93c9d5287%3A0x5ff98a191751e9aa!2sLS%20Bodyshop%20Dorset!5e0!3m2!1sen!2spl!4v1689587969192!5m2!1sen!2spl" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="w-full md:w-1/2 md:pl-5">
         <div class="text-center md:text-left">
-          <h3 class="text-2xl text-white border-t-white border-t-2 mt-5 pt-2">If you have any questions, send us an email:</h3>
+          <h3 class="text-3xl text-white border-t-white border-t-2 mt-5 pt-2">If you have any questions, send us an email:</h3>
           <form class="flex flex-col mt-5 p-5" action="https://formsubmit.co/ls.bodyshop.dorset@gmail.com" method="POST">
-            <label class="text-white" for="email">Email address:</label>
-            <input class="emailInput rounded-lg p-2 mb-4" type="email" id="email" name="email" required>
-            <label class="text-white mt-4" for="message">Message:</label>
-            <textarea class="mt-2 rounded-lg p-2 mb-4" id="message" name="message" required></textarea>
-            <input class="sendBtn text-white text-xl bg-red-600 w-full rounded-lg mt-5 p-2 cursor-pointer" type="submit" value="Send">
+            <label class="text-white text-lg" for="email">Email address:</label>
+            <input class="emailInput rounded-lg p-3 mb-4 text-lg" type="email" id="email" name="email" required>
+            <label class="text-white text-lg mt-4" for="message">Message:</label>
+            <textarea class="emailInput mt-2 rounded-lg p-3 mb-4 text-lg" id="message" name="message" required></textarea>
+            <input class="sendBtn text-white text-xl bg-red-600 w-full rounded-lg mt-5 p-3 cursor-pointer" type="submit" value="Send">
           </form>
-          <h3 class="text-2xl text-white border-t-white border-t-2 mt-5 pt-2">Or just call us:</h3>
-          <ul class="text-white text-xl mt-5">
+          <h3 class="text-3xl text-white border-t-white border-t-2 mt-5 pt-2">Or just call us:</h3>
+          <ul class="text-white text-2xl mt-5">
             <li class="flex items-center justify-center md:justify-start">
-              <i class="fa-solid fa-phone text-white text-xl mr-3"></i> +44 7401 714261
+              <i class="fa-solid fa-phone text-white text-2xl mr-3"></i> +44 7401 714261
             </li>
           </ul>
         </div>
@@ -44,11 +44,20 @@
 
   textarea {
     resize: vertical;
-    min-height: 100px;
+    min-height: 120px;
   }
 
   .sendBtn:hover {
     background-color: #e53935;
     transition: all 0.3s ease-in-out;
+  }
+
+  .emailInput:focus,
+  textarea:focus {
+    border-color: #ff5733;
+  }
+
+  .map-container iframe {
+    border: 1px solid #ccc; /* Add border to the map */
   }
 </style>

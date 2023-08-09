@@ -39,8 +39,8 @@
 		border-radius: 20px;
 		background: linear-gradient(to bottom right, #f0f0f0, #ffffff);
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-		width: 100%; /* Szerokość sekcji na 100% dla urządzeń mobilnych */
-		margin: auto; /* Wyśrodkowanie sekcji */
+		width: 100%;
+		margin: auto;
 		margin-bottom: 40px;
 		margin-top: 10px;
 	}
@@ -88,7 +88,15 @@
 		width: 100%;
 		height: 400px; /* Możesz dostosować tę wartość */
 		object-fit: cover;
+		transition: transform 0.3s;
 	}
+	.service-item:hover img {
+    transform: scale(1.05);
+  }
+
+  .service-item p {
+    text-align: justify; /* Align the text */
+  }
 </style>
 
 <script>

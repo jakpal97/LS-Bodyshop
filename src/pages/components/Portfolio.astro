@@ -28,64 +28,65 @@
 	</div>
 </div>
 <style>
-.portfolio-section {
-    margin-top: 10px;
-    width: 100%;
-    border-radius: 20px;
-    background: linear-gradient(to bottom right, #f0f0f0, #ffffff);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
+	.portfolio-section {
+		margin-top: 10px;
+		width: 100%;
+		border-radius: 20px;
+		background: linear-gradient(to bottom right, #f0f0f0, #ffffff);
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	}
 
-.slider {
-    relative: w-full;
-    md: w-2/3;
-    height: 100px; /* Nowa wysokość suwaka */
-    overflow: hidden;
-}
+	.slider {
+		relative: w-full;
+		md: w-2/3;
+		height: 100px; /* Nowa wysokość suwaka */
+		overflow: hidden;
+	}
 
-.slider-box {
-    display: flex;
-    transition-transform: duration-500;
-}
+	.slider-box {
+		display: flex;
+		transition-transform: duration-500;
+	}
 
-.slider-img {
-    flex: 0 0 20%;
-    height: auto;
-    object-fit: cover;
-    transition: transform 0.5s;
-}
+	.slider-img {
+		flex: 0 0 100%;
+		height: auto;
+		object-fit: cover;
+		transition: transform 0.5s;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	}
 
-.btn {
-    absolute: top-1/2;
-    transform: -translate-y-1/2;
-    px-2: py-1;
-    text-white: bg-black;
-    bg-opacity-40: text-4xl;
-    border-none: cursor-pointer;
-}
+	.btn {
+		absolute: top-1/2;
+		transform: -translate-y-1/2;
+		px-2: py-1;
+		text-white: bg-black;
+		bg-opacity-40: text-4xl;
+		border-none: cursor-pointer;
+	}
 
-.btn-left {
-    left: 0;
-}
+	.btn-left {
+		left: 0;
+	}
 
-.btn-right {
-    right: 0;
-}
+	.btn-right {
+		right: 0;
+	}
 
-@media (max-width: 767px) {
-    .btn {
-        display: none;
-    }
-}
+	@media (max-width: 767px) {
+		.btn {
+			display: none;
+		}
+	}
 
-@media (min-width: 768px) {
-    .portfolio-section {
-        width: 90%;
-    }
-    .slider {
-        height: 450px; 
-    }
-}
+	@media (min-width: 768px) {
+		.portfolio-section {
+			width: 90%;
+		}
+		.slider {
+			height: 450px;
+		}
+	}
 </style>
 <script>
 	document.addEventListener('DOMContentLoaded', function () {
@@ -93,8 +94,9 @@
 		const leftBtn = document.querySelector('.btn-left')
 		const rightBtn = document.querySelector('.btn-right')
 		const carouselImages = document.querySelectorAll('.slider-img')
-		const carouselWidth = sliderBox.clientWidth / carouselImages.length
+		const carouselWidth = sliderBox.clientWidth;
 		const carouselSpeed = 3000
+		console.log(carouselWidth)
 
 		let index = 0
 
