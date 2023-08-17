@@ -1,45 +1,45 @@
-
-	<div class="accordion md:max-w-4/5 lg:w-4/5 md:mx-auto flex justify-center  flex-col">
-		<h4 class="text-4xl text-center text-red font-semibold mb-4 mt-5">FAQ <i class="fa-solid fa-question text-red"></i></h4>
-		<div class="accordion-box">
-			<button class="accordion-btn ">
-				<i class="fas fa-gear"></i>
-				pytanie nr1</button
-			>
-			<div class="accordion-info">
-				<p class="accordion-info-text font-bold">
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui magni inventore quaerat iure eos ipsam quia,
-					odio quod laudantium eaque!
-				</p>
-			</div>
-		</div>
-		<div class="accordion-box">
-			<button class="accordion-btn">
-				<i class="fas fa-wrench"></i>
-				pytanie nr2</button
-			>
-			<div class="accordion-info">
-				<p class="accordion-info-text font-bold">
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui magni inventore quaerat iure eos ipsam quia,
-					odio quod laudantium eaque!
-				</p>
-				
-			</div>
-		</div>
-		<div class="accordion-box">
-			<button class="accordion-btn">
-				<i class="fa-solid fa-toolbox "></i>
-				pytanie nr4</button
-			>
-			<div class="accordion-info">
-				<p class="accordion-info-text font-bold">
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui magni inventore quaerat iure eos ipsam quia,
-					odio quod laudantium eaque!
-				</p>
-				<p class="accordion-info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-			</div>
+<div class="accordion md:max-w-4/5 lg:w-4/5 md:mx-auto flex justify-center flex-col">
+	<h4 class="text-4xl text-center text-red font-semibold mb-4 mt-5">
+		FAQ <i class="fa-solid fa-question text-red"></i>
+	</h4>
+	<div class="accordion-box">
+		<button class="accordion-btn">
+			<i class="fas fa-gear"></i>
+			pytanie nr1</button
+		>
+		<div class="accordion-info">
+			<p class="accordion-info-text font-bold">
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui magni inventore quaerat iure eos ipsam quia, odio
+				quod laudantium eaque!
+			</p>
 		</div>
 	</div>
+	<div class="accordion-box">
+		<button class="accordion-btn">
+			<i class="fas fa-wrench"></i>
+			pytanie nr2</button
+		>
+		<div class="accordion-info">
+			<p class="accordion-info-text font-bold">
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui magni inventore quaerat iure eos ipsam quia, odio
+				quod laudantium eaque!
+			</p>
+		</div>
+	</div>
+	<div class="accordion-box">
+		<button class="accordion-btn">
+			<i class="fa-solid fa-toolbox"></i>
+			pytanie nr4</button
+		>
+		<div class="accordion-info">
+			<p class="accordion-info-text font-bold">
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui magni inventore quaerat iure eos ipsam quia, odio
+				quod laudantium eaque!
+			</p>
+			<p class="accordion-info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+		</div>
+	</div>
+</div>
 
 <style>
 	p {
@@ -49,16 +49,22 @@
 	.fas,
 	.fa-solid {
 		margin-right: 20px;
-		color: #B22222;
+		color: #b22222;
 	}
 
 	.accordion {
-		width: 900px;
+		max-width: 100%; /* Ustawia maksymalną szerokość na 100% */
+		margin: 0 auto; /* Wyśrodkowuje zawartość */
 		background-color: #fff;
 		border-radius: 8px;
 		border-radius: 20px;
 		background: linear-gradient(to bottom right, #f0f0f0, #ffffff);
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	}
+	@media (min-width: 768px) {
+		.accordion {
+			max-width: 80%; /* Ustawia maksymalną szerokość na 80% dla ekranów większych niż 768px */
+		}
 	}
 
 	.accordion-box {
@@ -78,7 +84,7 @@
 
 	.accordion-btn:hover,
 	.accordion-btn:focus {
-		background-color: #B22222;
+		background-color: #b22222;
 		color: #fff;
 		outline: none;
 	}
