@@ -1,0 +1,134 @@
+
+	<div class="accordion md:max-w-4/5 lg:w-4/5 md:mx-auto flex justify-center  flex-col">
+		<h4 class="text-4xl text-center text-red font-semibold mb-4 mt-5">FAQ <i class="fa-solid fa-question text-red"></i></h4>
+		<div class="accordion-box">
+			<button class="accordion-btn ">
+				<i class="fas fa-gear"></i>
+				pytanie nr1</button
+			>
+			<div class="accordion-info">
+				<p class="accordion-info-text font-bold">
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui magni inventore quaerat iure eos ipsam quia,
+					odio quod laudantium eaque!
+				</p>
+			</div>
+		</div>
+		<div class="accordion-box">
+			<button class="accordion-btn">
+				<i class="fas fa-wrench"></i>
+				pytanie nr2</button
+			>
+			<div class="accordion-info">
+				<p class="accordion-info-text font-bold">
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui magni inventore quaerat iure eos ipsam quia,
+					odio quod laudantium eaque!
+				</p>
+				
+			</div>
+		</div>
+		<div class="accordion-box">
+			<button class="accordion-btn">
+				<i class="fa-solid fa-toolbox "></i>
+				pytanie nr4</button
+			>
+			<div class="accordion-info">
+				<p class="accordion-info-text font-bold">
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui magni inventore quaerat iure eos ipsam quia,
+					odio quod laudantium eaque!
+				</p>
+				<p class="accordion-info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+			</div>
+		</div>
+	</div>
+
+<style>
+	p {
+		margin-bottom: 0.5em;
+	}
+
+	.fas,
+	.fa-solid {
+		margin-right: 20px;
+		color: #B22222;
+	}
+
+	.accordion {
+		width: 900px;
+		background-color: #fff;
+		border-radius: 8px;
+		border-radius: 20px;
+		background: linear-gradient(to bottom right, #f0f0f0, #ffffff);
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+	}
+
+	.accordion-box {
+		margin: 20px;
+	}
+
+	.accordion-btn {
+		padding: 1em;
+		width: 100%;
+		font-size: 30px;
+		text-align: left;
+		border: none;
+		border-radius: 8px;
+		transition: background-color 0.3s;
+		cursor: pointer;
+	}
+
+	.accordion-btn:hover,
+	.accordion-btn:focus {
+		background-color: #B22222;
+		color: #fff;
+		outline: none;
+	}
+
+	.accordion-btn:hover .fas,
+	.accordion-btn:hover .fa-solid,
+	.accordion-btn:focus .fas,
+	.accordion-btn:focus .fa-solid {
+		color: #fff;
+	}
+
+	.accordion-info {
+		display: none;
+		padding: 1em 2em;
+	}
+
+	.active {
+		display: block;
+	}
+</style>
+<script>
+	const accordion = document.querySelector('.accordion')
+	const accordionBtns = document.querySelectorAll('.accordion-btn')
+
+	function openAccordionItems() {
+		if (this.nextElementSibling.classList.contains('active')) {
+			this.nextElementSibling.classList.remove('active')
+		} else {
+			closeAccordionItem()
+			this.nextElementSibling.classList.toggle('active')
+		}
+	}
+
+	const closeAccordionItem = () => {
+		const allActiveItems = document.querySelectorAll('.accordion-info')
+		allActiveItems.forEach(item => item.classList.remove('active'))
+	}
+
+	const clickOutsideAccordion = e => {
+		if (
+			e.target.classList.contains('accordion-btn') ||
+			e.target.classList.contains('accordion-info') ||
+			e.target.classList.contains('accordion-info-text')
+		)
+			return
+
+		closeAccordionItem()
+	}
+
+	accordionBtns.forEach(btn => btn.addEventListener('click', openAccordionItems))
+
+	window.addEventListener('click', clickOutsideAccordion)
+</script>
