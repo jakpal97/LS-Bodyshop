@@ -19,10 +19,7 @@ a:hover::after{
     width:100%;
     
 }
-a:first-child{
-    margin-right: auto;
-    margin-left:3em;
-}
+
 a:hover{
     color:#B22;
 }

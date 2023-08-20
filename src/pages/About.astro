@@ -59,4 +59,14 @@ import MainLayout from '../layouts/main-layout.astro'
 	h2 {
 		border-bottom: 3px solid #b22222;
 	}
+	@media (max-width: 768px) {
+		.contenair {
+			flex-direction: column;
+			align-items: center;
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
 </style>
