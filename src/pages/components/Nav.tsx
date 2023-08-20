@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { useMediaQuery } from '../../util/useMediaQuery'
 import { motion } from 'framer-motion'
+import './Nav.css'
+
 
 const Nav = () => {
 	const [toggled, setToggled] = useState(false)
@@ -12,7 +14,7 @@ const Nav = () => {
 
 	return (
 		<nav className={`${matches ? 'sticky top-0 bg-white' : ''} z-50 w-full`}>
-			<div className="container mx-auto max-w-4/5 lg:w-4/5 md:mx-auto flex justify-between items-center pt-5 pb-5 font-medium md:mx-16 ld:mx-32">
+			<div className="container mx-auto max-w-4/5 lg:w-4/5 md:mx-auto flex justify-between items-center pt-5 pb-3 font-medium md:mx-16 ld:mx-32">
 				<img src="/Logo.png" alt="Logo" className="w-40 h-15"></img>
 				{matches && (
 					<div className="flex gap-12 ">
@@ -25,8 +27,11 @@ const Nav = () => {
 						<a className="text-black" href="#slider" onClick={handleLinkClick}>
 							Portfolio
 						</a>
-						<a className="text-black" href="#contakt" onClick={handleLinkClick}>
+						<a className="text-black" href="#contact" onClick={handleLinkClick}>
 							Contact
+						</a>
+						<a className="text-black" href="/About" onClick={handleLinkClick}>
+							About
 						</a>
 					</div>
 				)}
@@ -72,11 +77,14 @@ const Nav = () => {
 							<a href="#services" onClick={handleLinkClick}>
 								Service
 							</a>
-							<a href="#contakt" onClick={handleLinkClick}>
+							<a href="#contact" onClick={handleLinkClick}>
 								Contakt
 							</a>
 							<a href="#slider" onClick={handleLinkClick}>
 								Portfolio
+							</a>
+							<a  href="/About" onClick={handleLinkClick}>
+								About
 							</a>
 						</div>
 					</motion.div>
@@ -84,6 +92,10 @@ const Nav = () => {
 			</div>
 		</nav>
 	)
+	
+
 }
 
+
 export default Nav
+

@@ -1,0 +1,28 @@
+a{
+    position: relative;
+    font-weight: 600;
+}
+a::after{
+    content: '';
+    width: 0%;
+    position:absolute;
+    display: block;
+    height: 0.4em;
+    background-color: #B22;
+    bottom: -1em;
+    transition: all ease-in-out 250ms;
+    border-radius: 8px;
+
+
+}
+a:hover::after{
+    width:100%;
+    
+}
+a:first-child{
+    margin-right: auto;
+    margin-left:3em;
+}
+a:hover{
+    color:#B22;
+}
