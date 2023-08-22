@@ -8,16 +8,15 @@ import AboutMe from '../pages/About.astro'
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+		<title>LS-BodyShop</title>
+		<meta name="description" content="Your trusted destination for premium auto body repairs and services." />
+		<link rel="canonical" href="https://twojadomena.pl/ścieżka-do-strony/" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500&family=Poppins:wght@300;400;500;600&display=swap"
 			rel="stylesheet"
 		/>
-
 		<link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 		<link rel="stylesheet" href="/src/util/global.css" />
@@ -25,13 +24,10 @@ import AboutMe from '../pages/About.astro'
 	<body class="m-0 parallax body">
 		<main>
 			<Nav client:load />
-
 			<slot />
-
 			<Footer />
 		</main>
-		<style >
-			
+		<style>
 			.parallax {
 				background-image: url('/tlo.jpg');
 				width: 100%;
@@ -47,8 +43,6 @@ import AboutMe from '../pages/About.astro'
 				}
 			}
 		</style>
-	
-
 		<script src="https://kit.fontawesome.com/82d0f73444.js" crossorigin="anonymous"></script>
 	</body>
 </html>
